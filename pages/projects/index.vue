@@ -17,6 +17,10 @@
 import { getImage } from '~~/util/image';
 import { Project } from '~~/util/types';
 
+useHead({
+    title: 'Nitwel.de / Projects'
+})
+
 const { getItems } = useDirectusItems()
 
 const items = await getItems<Project>({

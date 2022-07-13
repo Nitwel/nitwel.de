@@ -18,7 +18,9 @@
 </template>
 
 <script lang="ts" setup>
-
+useHead({
+    title: 'Nitwel.de'
+})
 </script>
 
 <style lang="scss" scoped>

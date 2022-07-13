@@ -23,6 +23,10 @@ const item = await getItemById<Project>({
     id: route.params.id as string
 }) as any as Project
 
+useHead({
+    title: `Nitwel.de / Projects / ${item.name}`
+})
+
 const renderedText = computed(() => marked.parse(item.content))
 </script>
 
