@@ -18,7 +18,7 @@ import { getImage } from '~~/util/image';
 import { Project } from '~~/util/types';
 
 useHead({
-    title: 'Nitwel.de / Projects'
+    title: 'Nils Twelker / Projects'
 })
 
 const { getItems } = useDirectusItems()
@@ -56,19 +56,17 @@ const items = await getItems<Project>({
         display: flex;
         flex-direction: column;
         overflow: hidden;
-
-        &-thumbnail {
-            
-        }
+        color: var(--black);
 
         &-content {
             display: flex;
             flex-direction: column;
-            padding: 20px;
+            padding: 15px 20px 20px 20px;
+            border-top: 2px solid #f3f3f3;
 
             .project-title {
                 font-size: 30px;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
             }
         }
     }

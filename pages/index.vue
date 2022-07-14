@@ -9,19 +9,25 @@
                 <div class="btn">About Me</div>
             </div>
         </div>
+        <div class="bubbles">
+            <img src="/bubble.svg"/>
+            <img src="/bubble.svg"/>
+            <img src="/bubble.svg"/>
+        </div>
         <div class="footer">
-            <a class="link" href="https://github.com/Nitwel" target="_blank"><img src="~~/public/github-bubble.svg"/></a>
-            <a class="link" href="https://gitlab.com/Nitwel" target="_blank"><img src="~~/public/gitlab-bubble.svg"/></a>
-            <a class="link" href="mailto:mail@nitwel.de" target="_blank"><img src="~~/public/mail-bubble.svg"/></a>
+            <a class="link" href="https://github.com/Nitwel" target="_blank"><img src="/github-bubble.svg"/></a>
+            <a class="link" href="https://gitlab.com/Nitwel" target="_blank"><img src="/gitlab-bubble.svg"/></a>
+            <a class="link" href="mailto:mail@nitwel.de" target="_blank"><img src="/mail-bubble.svg"/></a>
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
 useHead({
-    title: 'Nitwel.de'
+    title: 'Nils Twelker'
 })
 </script>
+
 
 <style lang="scss" scoped>
 .center {
@@ -52,6 +58,50 @@ useHead({
             align-items: center;
             padding: 10px 40px;
 
+        }
+    }
+}
+
+.bubbles {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    top: 50px;
+    right: 100px;
+
+    img {
+        position: relative;
+    }
+
+    img:nth-child(1) {
+        width: 200px;
+        height: 200px;
+        right: 10px;
+        top: -20px;
+        animation: 4s 500ms bubble infinite ease-in-out;
+    }
+
+    img:nth-child(2) {
+        right: 100px;
+        width: 150px;
+        height: 150px;
+        animation: 4500ms 1s bubble infinite ease-in-out;
+    }
+
+    img:nth-child(3) {
+        right: 20px;
+        width: 100px;
+        height: 100px;
+        animation: 3500ms 1s bubble infinite ease-in-out;
+    }
+
+    @keyframes bubble {
+        50% {
+            transform: translateY(20px);
+        }
+        100% {
+            transform: translateY(0px);
         }
     }
 }

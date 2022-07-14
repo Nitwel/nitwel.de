@@ -24,7 +24,7 @@ const item = await getItemById<Project>({
 }) as any as Project
 
 useHead({
-    title: `Nitwel.de / Projects / ${item.name}`
+    title: `Nils Twelker / Projects / ${item.name}`
 })
 
 const renderedText = computed(() => marked.parse(item.content))
@@ -64,6 +64,7 @@ const renderedText = computed(() => marked.parse(item.content))
         margin-bottom: 40px;
         border-radius: var(--border-radius);
         width: min(100%, 1000px);
+        color: var(--black);
 
         ::v-deep(a) {
             color: var(--secondary);
