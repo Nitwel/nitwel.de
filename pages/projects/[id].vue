@@ -45,6 +45,12 @@ const renderedText = computed(() => marked.parse(item.content))
         margin-bottom: 20px;
         color: var(--white);
         font-size: 50px;
+        text-align: center;
+
+        @media (max-width: 950px) {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
     }
 
     .back {

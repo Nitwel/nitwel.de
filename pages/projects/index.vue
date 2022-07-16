@@ -35,6 +35,10 @@ const items = await getItems<Project>({
     align-items: center;
     padding: 0 40px;
 
+    @media (max-width: 950px) {
+        padding: 0 20px;
+    }
+
     .title {
         margin-top: 100px;
         margin-bottom: 40px;
@@ -48,7 +52,12 @@ const items = await getItems<Project>({
     margin-bottom: 40px;
     grid-template-columns: repeat(auto-fill ,minmax(350px,1fr));
     gap: 20px;
-    width: min(100%, 1000px);
+    max-width: min(100%, 1000px);
+
+    @media (max-width: 950px) {
+        grid-template-columns: repeat(auto-fill ,minmax(100px,350px));
+        
+    }
 
     .project {
         background-color: var(--white);
@@ -67,6 +76,10 @@ const items = await getItems<Project>({
             .project-title {
                 font-size: 30px;
                 margin-bottom: 15px;
+
+                @media (max-width: 950px) {
+                    font-size: 26px;
+                }
             }
         }
     }

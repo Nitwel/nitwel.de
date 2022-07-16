@@ -21,6 +21,20 @@ const large = computed(() => route.path === '/')
     position: fixed;
     padding: 20px;
     transition: all .4s var(--ease);
+    transform-origin: 0px 0px;
+
+    &.large {
+        transform: scale(1.2);
+
+        @media (max-width: 950px) {
+            transform: scale(0.8);
+        }
+    }
+
+    @media (max-width: 950px) {
+        transform: scale(0.6);
+    }
+
     .name {
         font-size: 40px;
         font-weight: 300;
@@ -36,17 +50,13 @@ const large = computed(() => route.path === '/')
     .circle {
         z-index: -1;
         position: absolute;
-        top: -360px;
-        left: -150px;
         width: 500px;
         height: 500px;
         background-color: var(--white);
         border-radius: 50%;
+        transform: translate(-34%, -76%);
+        box-shadow: 0px 0px 4px rgb(185, 185, 185);
         
-    }
-
-    &.large {
-        transform: scale(1.3) translate(35px, 10px);
     }
 }
 </style>

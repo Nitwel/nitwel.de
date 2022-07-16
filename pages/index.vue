@@ -6,7 +6,7 @@
 
             <div class="btns">
                 <NuxtLink to="/projects" ><div class="btn">My Projects</div></NuxtLink>
-                <div class="btn">About Me</div>
+                <!-- <div class="btn">About Me</div> -->
             </div>
         </div>
         <div class="bubbles">
@@ -33,14 +33,27 @@ useHead({
 .center {
     margin: auto;
     color: var(--white);
+
+    @media (max-width: 950px) {
+        max-width: 100%;
+    }
+
     .top {
         font-size: 40px;
         font-weight: 300;
+
+        @media (max-width: 950px) {
+            font-size: 22px;
+        }
     }
     .main {
         font-weight: 300;
         font-size: 100px;
         text-transform: uppercase;
+
+        @media (max-width: 950px) {
+            font-size: 44px;
+        }
     }
 
     .btns {
@@ -50,6 +63,12 @@ useHead({
         color: var(--primary);
         font-size: 30px;
         margin-top: 40px;
+
+        @media (max-width: 950px) {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
         .btn {
             background-color: var(--white);
             border-radius: 100px;
@@ -69,6 +88,14 @@ useHead({
     align-items: flex-end;
     top: 50px;
     right: 100px;
+    transform-origin: 100% 0%;
+
+
+    @media (max-width: 950px) {
+        top: 30px;
+        right: 20px;
+        transform: scale(0.45);
+    }
 
     img {
         position: relative;
@@ -114,6 +141,11 @@ useHead({
 
     display: flex;
     gap: 20px;
+    transform-origin: 100% 100%;
+
+    @media (max-width: 950px) {
+        transform: scale(0.7);
+    }
 
     .link {
         transition: transform .3s cubic-bezier(.18,.89,.51,1.66);
