@@ -55,7 +55,10 @@ const large = computed(() => route.path === '/')
         background-color: var(--white);
         border-radius: 50%;
         transform: translate(-34%, -76%);
-        box-shadow: 0px 0px 4px rgb(185, 185, 185);
+        
+        @media (max-width: 950px) {
+            box-shadow: 0px 0px 6px 0px rgb(212, 212, 212);
+        }
         
     }
 }
