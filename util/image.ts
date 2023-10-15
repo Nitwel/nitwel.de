@@ -5,9 +5,9 @@ export type ImageOptions = Partial<{
 }>
 
 export function getImage(id: string, options: ImageOptions = {}) {
-    let url = new URL(`https://nitwel-eu.directus.app/assets/${id}`)
+    let url = new URL(`https://nitwel.de/assets/${id}`)
 
-    for(let [key, val] of Object.entries(options)) {
+    for (let [key, val] of Object.entries(options)) {
         url.searchParams.set(key, val.toString())
     }
     return url.toString()
