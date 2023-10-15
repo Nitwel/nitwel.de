@@ -5,6 +5,6 @@ export default defineNuxtConfig({
     modules: ["nuxt-directus", "@vueuse/nuxt"],
     css: ['~~/assets/main.css'],
     directus: {
-        url: 'https://nitwel-eu.directus.app/'
+        url: 'https://db.nitwel.de/'
     }
 })
